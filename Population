@@ -1,0 +1,27 @@
+/*Assume that the population of Mexico is 121 million and that the population increases 1.01 percent annually. 
+Assume that the population of USA is 315 million and that the population reduced 0.15 percent annually. 
+Write an application that displays the population for the two countries every year until the population exceeds that of the USA, 
+and display the number of years it took.*/
+
+package javaclasshomework3;
+public class Population 
+{
+    public static void main(String[] args) 
+    {
+        //initialize the pop of each country
+        double Mex = 121;
+        double USA = 315;
+        //initialize the pop percentage of each country
+        double MexPopRate = 1.01;
+        double USAPopRate = 0.15;
+        for(int i = 1; USA > Mex; i++)
+        {
+            System.out.println("Year " + i);
+            System.out.println("Mexico's population is " + Math.round(Mex*100)/100.00 + " million");
+            System.out.println("USA's population is " + Math.round(USA*100)/100.00 + " million");
+            Mex += Mex * MexPopRate / 100;  //increase the Mex Pop
+            USA -= USA * USAPopRate / 100;  //decrease the USA pop
+            System.out.println("It took " + i + " years for the population of Mexio to exceed the USA population ");
+        }
+    }
+}
