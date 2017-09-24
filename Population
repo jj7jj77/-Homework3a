@@ -3,8 +3,8 @@ Assume that the population of USA is 315 million and that the population reduced
 Write an application that displays the population for the two countries every year until the population exceeds that of the USA, 
 and display the number of years it took.*/
 
-package javaclasshomework3;
-public class Population 
+//package javaclasshomework3;
+//public class Population 
 {
     public static void main(String[] args) 
     {
@@ -14,14 +14,15 @@ public class Population
         //initialize the pop percentage of each country
         double MexPopRate = 1.01;
         double USAPopRate = 0.15;
-        for(int i = 1; USA > Mex; i++)
+        int i;
+        for(i=0; USA > Mex; i++)
         {
             System.out.println("Year " + i);
             System.out.println("Mexico's population is " + Math.round(Mex*100)/100.00 + " million");
             System.out.println("USA's population is " + Math.round(USA*100)/100.00 + " million");
             Mex += Mex * MexPopRate / 100;  //increase the Mex Pop
-            USA -= USA * USAPopRate / 100;  //decrease the USA pop
-            System.out.println("It took " + i + " years for the population of Mexio to exceed the USA population ");
+            USA -= USA * USAPopRate / 100;  //decrease the USA Pop
         }
+        System.out.println("It took " + i + " years for the population of Mexio to exceed the USA population ");
     }
 }
